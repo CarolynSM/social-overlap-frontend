@@ -1,15 +1,46 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import styled from "styled-components";
 
-const HomeForm = () => (
-  <Form>
-    <Label htmlFor="handle">Whose followers do you want:</Label>
-    <Input type="text" name="handle" />
-    <Submit>Get me some data</Submit>
-  </Form>
-);
+import { setUser, loadUserProfile } from "../actions.js";
 
-export default HomeForm;
+class HomeForm extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Form>
+        <Label htmlFor="handle">Whose followers do you want:</Label>
+        <Input
+          type="text"
+          name="handle"
+          onChange={event => this.props.setUser(event.target.value)}
+        />
+        <Submit type="submit" onClick={() => this.props.loadUserProfile(this.props.currentUser)}>
+          Start
+        </Submit>
+      </Form>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser,
+  profile: state.user.profile
+});
+
+const mapDispatchToProps = dispatch => ({
+  setUser: userName => {
+    dispatch(setUser(userName));
+  },
+  loadUserProfile: handle => {
+    dispatch(loadUserProfile(handle));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeForm);
 
 const Form = styled.div`
   align-items: center;
@@ -38,6 +69,7 @@ const Submit = styled.button`
   font: var(--primary-font);
   font-size: 1.2em;
   margin: 1rem;
-  padding: 0.7em 1rem;
+  padding: 0.7em 0;
   text-transform: uppercase;
+  width: 70%;
 `;
