@@ -1,6 +1,7 @@
 const initialState = {
   currentUser: undefined,
-  profile: undefined,
+  currentUserId: undefined,
+  currentProfile: {},
   view: "HOME"
 };
 
@@ -13,10 +14,11 @@ export default function(state = initialState, action) {
         currentUser: action.user
       };
     case "LOAD_USER_PROFILE":
-      console.log("test");
       return {
         ...state,
-        profile: action.data
+        currentUserId: action.data.profile.userId,
+        currentProfile: action.data,
+        view: action.view
       };
     default:
       return state;

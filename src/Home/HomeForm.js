@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { setUser, loadUserProfile } from "../actions.js";
@@ -47,7 +48,7 @@ const Form = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 0;
+  padding: 4rem 0;
 `;
 
 const Label = styled.label`

@@ -4,18 +4,22 @@ import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { logger } from "redux-logger";
 import thunk from "redux-thunk";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Home from "./Home";
+import Main from "./Main.js";
+import UserProfile from "./UserProfile.js";
 import rootReducer from "./rootReducer.js";
 
 const middleware = [logger, thunk];
 
 const store = createStore(rootReducer, {}, composeWithDevTools(applyMiddleware(...middleware)));
 
-const App = () => (
-  <Provider store={store}>
-    <Home />
-  </Provider>
-);
-
-export default App;
+export default class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Main />
+      </Provider>
+    );
+  }
+}
