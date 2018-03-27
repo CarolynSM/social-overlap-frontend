@@ -2,6 +2,7 @@ const initialState = {
   currentUser: undefined,
   currentUserId: undefined,
   currentProfile: {},
+  report: undefined,
   view: "HOME"
 };
 
@@ -18,6 +19,12 @@ export default function(state = initialState, action) {
         ...state,
         currentUserId: action.data.profile.userId,
         currentProfile: action.data,
+        view: action.view
+      };
+    case "GET_REPORT":
+      return {
+        ...state,
+        report: action.data.report,
         view: action.view
       };
     default:
