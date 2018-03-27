@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 
 import UserProfile from "./UserProfile.js";
+import UserDataButton from "./UserDataButton.js";
 
 const User = () => {
-  return <UserProfile />;
+  return (
+    <div>
+      <UserProfile />
+      <UserDataButton />
+    </div>
+  );
 };
 
 export default User;
