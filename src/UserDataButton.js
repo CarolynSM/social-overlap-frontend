@@ -12,7 +12,7 @@ class UserDataButton extends Component {
   render() {
     return (
       <ButtonContainer>
-        <Button>Get Followers</Button>
+        <Button onClick={() => this.props.getReport()}>Get Followers</Button>
       </ButtonContainer>
     );
   }
