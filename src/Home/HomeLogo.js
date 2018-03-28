@@ -4,9 +4,7 @@ import logo from "../assets/logo.png";
 
 const HomeLogo = () => (
   <LogoContainer>
-    <LogoImgContainer>
-      <Logo src={logo} />
-    </LogoImgContainer>
+    <Logo src={logo} />
     <LogoText>Social Overlap</LogoText>
   </LogoContainer>
 );
@@ -14,11 +12,12 @@ const HomeLogo = () => (
 export default HomeLogo;
 
 const LogoContainer = styled.header`
+  align-items: center;
   background-color: var(--black);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding: 1.5em 1rem;
 `;
 
 const LogoImgContainer = styled.div`
@@ -28,14 +27,13 @@ const LogoImgContainer = styled.div`
 
 const Logo = styled.img`
   height: 40%;
-  padding: 2rem;
-  width: 40%;
+  width: 20%;
 `;
 
 const LogoText = styled.h1`
   color: white;
   font-family: var(--logo-font);
-  font-size: 2.3em;
-  text-align: center;
+  font-size: 1.7em;
+  padding-left: 1rem;
   text-transform: uppercase;
 `;

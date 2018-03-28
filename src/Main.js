@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import HomeLogo from "./Home/HomeLogo.js";
 import HomeForm from "./Home/HomeForm.js";
 import User from "./User.js";
-import Footer from "./Home/Footer.js";
+import Report from "./Report.js";
 import { loadUserProfile } from "./actions.js";
 
 class Main extends Component {
@@ -21,6 +21,8 @@ class Main extends Component {
         return <HomeForm />;
       case "PROFILE":
         return <User />;
+      case "REPORT":
+        return <Report />;
       default:
         return <HomeForm />;
     }
@@ -31,7 +33,6 @@ class Main extends Component {
       <div>
         <HomeLogo />
         <main>{this.currentView()}</main>
-        <Footer />
       </div>
     );
   }

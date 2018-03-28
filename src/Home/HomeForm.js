@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { setUser, loadUserProfile } from "../actions.js";
+import Footer from "./Footer.js";
 
 class HomeForm extends Component {
   constructor(props) {
@@ -12,17 +13,20 @@ class HomeForm extends Component {
 
   render() {
     return (
-      <Form>
-        <Label htmlFor="handle">Whose followers do you want:</Label>
-        <Input
-          type="text"
-          name="handle"
-          onChange={event => this.props.setUser(event.target.value)}
-        />
-        <Submit type="submit" onClick={() => this.props.loadUserProfile(this.props.currentUser)}>
-          Start
-        </Submit>
-      </Form>
+      <div>
+        <Form>
+          <Label htmlFor="handle">Your Instagram Handle:</Label>
+          <Input
+            type="text"
+            name="handle"
+            onChange={event => this.props.setUser(event.target.value)}
+          />
+          <Submit type="submit" onClick={() => this.props.loadUserProfile(this.props.currentUser)}>
+            Start
+          </Submit>
+        </Form>
+        <Footer />
+      </div>
     );
   }
 }
@@ -48,7 +52,7 @@ const Form = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 6rem 0 18rem 0;
 `;
 
 const Label = styled.label`

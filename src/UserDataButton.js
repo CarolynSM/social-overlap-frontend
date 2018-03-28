@@ -12,7 +12,7 @@ class UserDataButton extends Component {
   render() {
     return (
       <ButtonContainer>
-        <Button onClick={() => this.props.getReport()}>Get Followers</Button>
+        <Button onClick={() => this.props.getReport("REPORT")}>Run Report</Button>
       </ButtonContainer>
     );
   }
@@ -26,8 +26,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getReport: id => {
-    dispatch(getReport(id));
+  getReport: view => {
+    dispatch(getReport(view));
   }
 });
 
@@ -36,6 +36,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(UserDataButton);
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
+  padding-bottom: 17.5em;
+  padding-top: 4rem;
 `;
 
 const Button = styled.button`

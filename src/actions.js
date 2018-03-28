@@ -16,3 +16,10 @@ export function loadUserProfile(userName) {
     });
   };
 }
+
+export function getReport(view) {
+  return {
+    type: "GET_REPORT",
+    view: "REPORT"
+  };
+}

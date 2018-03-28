@@ -20,6 +20,11 @@ export default function(state = initialState, action) {
         currentProfile: action.data,
         view: action.view
       };
+    case "GET_REPORT":
+      return {
+        ...state,
+        view: action.view
+      };
     default:
       return state;
   }
