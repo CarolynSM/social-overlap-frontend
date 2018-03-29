@@ -63,7 +63,7 @@ export default class Report extends Component {
     return (
       <div>
         <UserProfile />
-        <Title>Your top 5 common followers:</Title>
+        <Title>Your Top 5 Overlapping Users:</Title>
         <ReportContainer>{this.renderReport(demoData)}</ReportContainer>
         <Footer />
       </div>

@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Main from "./Main.js";
 import UserProfile from "./UserProfile.js";
 import rootReducer from "./rootReducer.js";
+import Splash from "./Splash.js";
 
 const middleware = [logger, thunk];
 
@@ -18,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Main />
+        <Splash />
       </Provider>
     );
   }
