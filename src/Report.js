@@ -8,9 +8,9 @@ import Footer from "./Home/Footer.js";
 const demoData = [
   {
     profileImg:
-      "https://scontent-sea1-1.cdninstagram.com/vp/013b9d2c41786cda8795f255f6448fce/5B337CF3/t51.2885-19/s320x320/21879789_1880238492304636_3853081879263576064_n.jpg",
-    userName: "adage",
-    fullName: "Ad Age"
+      "https://scontent-lga3-1.cdninstagram.com/vp/d7846d0d4e5070da4311b3f680f47d6c/5B543920/t51.2885-19/11247849_981284811922168_882956497_a.jpg",
+    userName: "denverbeerco",
+    fullName: "Denver Beer Co."
   },
   {
     profileImg:
@@ -26,15 +26,15 @@ const demoData = [
   },
   {
     profileImg:
-      "https://scontent-sea1-1.cdninstagram.com/vp/15dbabfad578c0ce88f8f4cc1e491d0c/5B6AAD89/t51.2885-19/s320x320/15251604_1849803945255668_10615432578859008_a.jpg",
-    userName: "generalassembly",
-    fullName: "General Assembly"
+      "https://scontent-lga3-1.cdninstagram.com/vp/e0a1e5397883309544e950d8ce05b727/5B3DF158/t51.2885-19/s320x320/29095448_1835950023111402_4971949052036907008_n.jpg",
+    userName: "rockies",
+    fullName: "Colorado Rockies"
   },
   {
     profileImg:
-      "https://scontent-sea1-1.cdninstagram.com/vp/8d0ebac8b4fee7aa7498f4891e981c13/5B3754E3/t51.2885-19/s320x320/13739633_1648409658810275_999417478_a.jpg",
-    userName: "zuck",
-    fullName: "Mark Zuckerberg"
+      "https://scontent-lga3-1.cdninstagram.com/vp/9160026658913a5b3718471ba85138bf/5B3AC854/t51.2885-19/11375227_604154553058104_1201110079_a.jpg",
+    userName: "denverunionstation",
+    fullName: "Denver's Union Station"
   }
 ];
 

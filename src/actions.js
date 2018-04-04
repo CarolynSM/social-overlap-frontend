@@ -7,7 +7,7 @@ export function setUser(userName) {
 
 export function loadUserProfile(userName) {
   return async function(dispatch) {
-    const res = await fetch("https://social-overlap-server.herokuapp.com/" + userName);
+    const res = await fetch("https://social-overlap-server.herokuapp.com/api/" + userName);
     const profile = await res.json();
     return dispatch({
       type: "LOAD_USER_PROFILE",

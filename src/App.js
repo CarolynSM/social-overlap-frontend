@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Splash />
+        <Main />
       </Provider>
     );
   }

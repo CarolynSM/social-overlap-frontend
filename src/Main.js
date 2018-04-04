@@ -5,6 +5,7 @@ import HomeLogo from "./Home/HomeLogo.js";
 import HomeForm from "./Home/HomeForm.js";
 import User from "./User.js";
 import Report from "./Report.js";
+import Followers from "./Followers.js";
 import { loadUserProfile } from "./actions.js";
 
 class Main extends Component {
@@ -23,6 +24,8 @@ class Main extends Component {
         return <User />;
       case "REPORT":
         return <Report />;
+      case "FOLLOWERS":
+        return <Followers />;
       default:
         return <HomeForm />;
     }

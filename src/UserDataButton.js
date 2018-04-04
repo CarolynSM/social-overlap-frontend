@@ -2,36 +2,29 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
-import { getReport } from "./actions.js";
-
 class UserDataButton extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
-      <ButtonContainer>
-        <Button onClick={() => this.props.getReport("REPORT")}>Run Report</Button>
-      </ButtonContainer>
+      <div>
+        <h2>
+          We still haven&#39;t figured out how to serve you the data you want...in the meantime:
+        </h2>
+        <ButtonContainer>
+          <Button>Join the Club</Button>
+        </ButtonContainer>
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
   currentUser: state.user.currentUser,
+  currentUserId: state.user.currentUserId,
   currentProfile: state.user.currentProfile,
-  report: state.user.report,
   view: state.user.view
 });
 
-const mapDispatchToProps = dispatch => ({
-  getReport: view => {
-    dispatch(getReport(view));
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(UserDataButton);
+export default connect(mapStateToProps)(UserDataButton);
 
 const ButtonContainer = styled.div`
   display: flex;
