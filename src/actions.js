@@ -17,21 +17,9 @@ export function loadUserProfile(userName) {
   };
 }
 
-<<<<<<< HEAD
 export function getReport(view) {
   return {
     type: "GET_REPORT",
     view: "REPORT"
-=======
-export function getReport(userId) {
-  return async function(dispatch) {
-    const res = await fetch("https://social-overlap-server.herokuapp.com/" + userId + "/followers");
-    const report = await res.json();
-    return dispatch({
-      type: "GET_REPORT",
-      data: report,
-      view: "REPORT"
-    });
->>>>>>> 06d5c247f7440bab34aae5dc156086f123a2e1af
   };
 }

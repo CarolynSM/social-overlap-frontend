@@ -24,10 +24,7 @@ export default function(state = initialState, action) {
     case "GET_REPORT":
       return {
         ...state,
-<<<<<<< HEAD
-=======
         report: action.data.report,
->>>>>>> 06d5c247f7440bab34aae5dc156086f123a2e1af
         view: action.view
       };
     default:
